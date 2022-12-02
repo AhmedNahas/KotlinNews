@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Kotlin News</string>
+    <string name="article_image">news header</string>
+    <string name="article_title">Article title</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_content">No Content</string>
 </resources>

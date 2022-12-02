@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/articleFragment">
+
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="tri.pro.kotlinnews.modules.articleScreen.ArticleFragment"
+        android:label="ArticleFragment" >
+        <action
+            android:id="@+id/action_articleFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="tri.pro.kotlinnews.modules.articleDetailScreen.ArticleDetailFragment"
+        android:label="fragment_article_detail"
+        tools:layout="@layout/fragment_article_detail" >
+
+        <argument
+            android:name="article"
+            app:argType="tri.pro.kotlinnews.models.Data"
+            app:nullable="false"/>
+        <action
+            android:id="@+id/action_articleDetailFragment_pop"
+            app:popUpTo="@id/articleDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
