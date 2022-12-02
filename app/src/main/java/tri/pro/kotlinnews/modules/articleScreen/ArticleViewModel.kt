@@ -9,8 +9,10 @@ import retrofit2.Callback
 import retrofit2.Response
 import tri.pro.kotlinnews.models.ObjectResponse
 import tri.pro.kotlinnews.remote.RetrofitInstance
+import java.util.ArrayList
 
 class ArticleViewModel : ViewModel() {
+    private lateinit var currentList: ArrayList<ObjectResponse>
     private var movieLiveData = MutableLiveData<ObjectResponse>()
     fun getPopularMovies() {
         RetrofitInstance.api.getAllData().enqueue(object  : Callback<ObjectResponse> {
@@ -28,5 +30,13 @@ class ArticleViewModel : ViewModel() {
     }
     fun observeMovieLiveData() : LiveData<ObjectResponse> {
         return movieLiveData
+    }
+
+    fun setCurrentList(children: ArrayList<ObjectResponse>) {
+        this.currentList = children
+    }
+
+    fun getCurrentListSize() : Int{
+        return currentList.size
     }
 }
