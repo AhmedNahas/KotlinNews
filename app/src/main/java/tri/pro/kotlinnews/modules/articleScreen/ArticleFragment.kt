@@ -51,13 +51,11 @@ class ArticleFragment : Fragment() {
                     Toast.makeText(requireActivity(), "No old data to show", LENGTH_LONG).show()
                 } else {
                     articleAdapter.setArticleList(offlineData)
-                    viewModel.setCurrentList(offlineData.data.children)
                 }
             } else {
                 viewModel.getPopularMovies()
                 viewModel.observeMovieLiveData().observe(viewLifecycleOwner) { articleList ->
                     articleAdapter.setArticleList(articleList)
-                    viewModel.setCurrentList(articleList.data?.children!!)
                     setDataFromSharedPreferences(articleList)
                 }
             }
