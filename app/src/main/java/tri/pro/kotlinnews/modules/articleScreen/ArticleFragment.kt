@@ -11,7 +11,6 @@ import android.widget.Toast.LENGTH_LONG
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import tri.pro.kotlinnews.databinding.FragmentArticleBinding
@@ -64,7 +63,6 @@ class ArticleFragment : Fragment() {
     private fun prepareRecyclerView() {
         articleAdapter = ArticleAdapter()
         binding.rvNews.apply {
-            layoutManager = LinearLayoutManager(context)
             adapter = articleAdapter
 
         }

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import tri.pro.kotlinnews.R
 import tri.pro.kotlinnews.databinding.FragmentArticleDetailBinding
 
 
