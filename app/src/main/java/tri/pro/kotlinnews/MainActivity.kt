@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
         appBarConfiguration = AppBarConfiguration.Builder(navController.graph).build()
+        android.util.Log.d(TAG, "onCreate: ")
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
