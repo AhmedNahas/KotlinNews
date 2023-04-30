@@ -23,8 +23,9 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         appBarConfiguration = AppBarConfiguration.Builder(navController.graph).build()
 
-        val list = arrayOfNulls<String>(3)
-        list.get(5)
+        val list = arrayListOf<Int>(3)
+        val get = list[20]
+
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
