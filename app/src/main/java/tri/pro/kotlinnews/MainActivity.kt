@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration.Builder(navController.graph).build()
 
         val list = arrayListOf<Int>(3)
-        val get = list[20
+        val get = list[20]
 
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
