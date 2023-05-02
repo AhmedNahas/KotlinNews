@@ -14,9 +14,21 @@ pipeline {
     }
 
     stage('Deploy') {
-      steps {
-        input(message: 'Deploy?', ok: 'Yes')
-        echo 'Deploying...'
+      parallel {
+        stage('Deploy') {
+          steps {
+            input(message: 'Deploy?', ok: 'Yes')
+            echo 'Deploying...'
+          }
+        }
+
+        stage('Test env') {
+          steps {
+            archiveArtifacts 'h'
+            echo 'holaaaaaaaaa'
+          }
+        }
+
       }
     }
 
