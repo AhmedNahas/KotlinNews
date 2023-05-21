@@ -24,7 +24,6 @@ pipeline {
 
         stage('Test env') {
           steps {
-            archiveArtifacts 'jenkinsfile'
             echo 'holaaaaaaaaa'
           }
         }
